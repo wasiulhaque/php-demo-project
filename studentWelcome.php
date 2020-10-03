@@ -9,6 +9,9 @@
     
     <br><br><br><br><br><br><br>
     <h1>Welcome Student</h1>
+    <a href="viewResult.php">View Your Marks</a> <br> <br>
+    <a href="index.php">Logout</a><br><br>
+    <hr>
 
 
 </body>

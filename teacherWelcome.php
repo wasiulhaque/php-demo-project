@@ -9,6 +9,10 @@
     
     <br><br><br><br><br><br><br>
     <h1>Welcome Teacher</h1>
+    <a href="addResultInput.php">Add Result</a> <br> <br>
+    <a href="editResult.php">Edit Result</a><br><br>
+    <a href="index.php">Logout</a><br><br>
+    <hr>
 
 
 </body>
