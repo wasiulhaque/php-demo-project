@@ -27,7 +27,9 @@ if(isset($_REQUEST["action"])){
 <h1>Registration</h1>
 	
 	<input type="text" name="name" placeholder ="Name"/> <br> <br>
-	<input type="text" name="role" placeholder ="Role"/> <br> <br>
+	<label for="role">Select Your Role</label><select name="role" id="role">
+	<option value = "Teacher">Teacher</option>
+	<option value="Student">Student</option> </select> <br><br>
 	<input type="email" name="email" placeholder ="Email"/> <br> <br>
 	<input type="password" name="password" placeholder ="Password"/> <br> <br>
 	<input type="submit" name="submitButton" placeholder ="Save Data" value = "Register"/>

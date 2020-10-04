@@ -16,9 +16,48 @@
     Math: <input type="number" name="math"/> / 100 <br> <br> <br>
 	<input type="submit" name="submitButton" value ="Submit"/> <br> <br>
 	<a href="teacherWelcome.php">Home</a> <br>
-    <br> <br>
-    <hr>
-</form> 
+    <br> 
+</form>
+
+<h3>DATASHEET</h3>
+<table border = .1px align = center style="width:60%">
+<tr>
+<th>Name</th>
+<th>Bangla</th>
+<th>English</th>
+<th>Math</th>
+<th>Total</th>
+<th>Grade</th>
+</tr>
+
+
+
+<?php
+
+require_once('connect.php');
+$fetchQuery = "SELECT * FROM result";
+$runQuery = mysqli_query($con,$fetchQuery);
+
+if($runQuery == true){
+	while($data = mysqli_fetch_array($runQuery)){ ?>
+		<tr>
+		<td><?php echo $data["name"];?></td>
+		<td><?php echo $data["bangla"];?></td>
+		<td><?php echo $data["english"];?></td>
+		<td><?php echo $data["math"];?></td>
+		<?php $total = $data["math"]+$data["english"]+$data["bangla"]; 
+		if($total>239) $grade = "A+";
+		if($total<239) $grade = "A-";?>
+		<td><?php echo $total;?></td>
+		<td><?php echo $grade;?></td>
+		</tr>
+<?php	}
+} ?>
+
+</table>
+<br>
+<hr>
+<br>
 
 <?php
 
