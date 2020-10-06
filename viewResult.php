@@ -69,7 +69,7 @@ else echo "Better luck next time, $name";
 
 
 <br>
-<a href="studentWelcome.php">Go Back</a> <br> <br>
+<a href="studentWelcome.php">Go back</a> <br> <br>
 <hr>
 </body>
 </html>
