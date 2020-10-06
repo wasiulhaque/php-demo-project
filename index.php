@@ -32,7 +32,7 @@
 
 				<form class="login100-form validate-form" action = "logincore.php" method = "POST">
 					<span class="login100-form-title">
-						Member Login
+						Result Management System
 					</span>
 
 					<div class="wrap-input100 validate-input" data-validate = "Valid email is required: ex@abc.xyz">
