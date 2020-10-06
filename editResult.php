@@ -13,11 +13,11 @@
 <table border = .1px align = center style="width:60%">
 <tr>
 <th>Name</th>
-<th>Bangla</th>
-<th>English</th>
-<th>Math</th>
+<th>Course ID</th>
+<th>Mid-term Mark</th>
+<th>Final Mark</th>
 <th>Total</th>
-<th>Grade</th>
+<th>Final Grade</th>
 <th>Action</th>
 </tr>
 
@@ -33,12 +33,12 @@ if($runQuery == true){
 	while($data = mysqli_fetch_array($runQuery)){ ?>
 		<tr>
 		<td><?php echo $data["name"];?></td>
-		<td><?php echo $data["bangla"];?></td>
-		<td><?php echo $data["english"];?></td>
-		<td><?php echo $data["math"];?></td>
-		<?php $total = $data["math"]+$data["english"]+$data["bangla"]; 
-		if($total>239) $grade = "A+";
-		if($total<239) $grade = "A-";?>
+		<td><?php echo $data["courseid"];?></td>
+		<td><?php echo $data["mid"];?></td>
+		<td><?php echo $data["final"];?></td>
+		<?php $total = $data["mid"]+$data["final"];
+		if($total>160) $grade = "A+";
+		if($total<160) $grade = "A-";?>
 		<td><?php echo $total;?></td>
 		<td><?php echo $grade;?></td>
         <td><a href='editData.php?id=<?php echo $data["id"];?>'>Edit</a> | <a href='deleteData.php?id=<?php echo $data["id"];?>'>Delete</a></td>    

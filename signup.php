@@ -30,6 +30,12 @@ if(isset($_REQUEST["action"])){
 	<label for="role">Select Your Role</label><select name="role" id="role">
 	<option value = "Teacher">Teacher</option>
 	<option value="Student">Student</option> </select> <br><br>
+	<label for="semester">Select Your Semester (If Student)</label> <select name="semester" id="semester">
+	<option value="0">N/A</option>
+	<option value="1">1</option>
+	<option value="2">2</option>
+	<option value="3">3</option>
+	</select> <br><br>
 	<input type="email" name="email" placeholder ="Email"/> <br> <br>
 	<input type="password" name="password" placeholder ="Password"/> <br> <br>
 	<input type="submit" name="submitButton" placeholder ="Save Data" value = "Register"/>
@@ -38,6 +44,7 @@ if(isset($_REQUEST["action"])){
 	<br>
 	<hr>
 </form>
+
 	
 </body>
 </html> 

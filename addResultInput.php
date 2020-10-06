@@ -10,10 +10,10 @@
 
 <form action = "addResultDB.php" method = "GET" align = "center">
 	<br><br><br><br><br><br><br><br><br>
-    Name of the Student: <input type="text" name="name"/> <br><br><br>
-	Bangla: <input type="number" name="bangla"/> / 100 <br> <br>
-    English: <input type="number" name="english"/> / 100 <br> <br>
-    Math: <input type="number" name="math"/> / 100 <br> <br> <br>
+    Name of the Student: <input type="text" name="name"/> <br><br>
+	Course ID: <input type="number" name="courseid"/> <br> <br>
+    Mid-term Mark: <input type="number" name="mid"/> / 50 <br> <br>
+    Final Mark: <input type="number" name="final"/> / 150 <br> <br> <br>
 	<input type="submit" name="submitButton" value ="Submit"/> <br> <br>
 	<a href="teacherWelcome.php">Home</a> <br>
     <br> 
@@ -23,11 +23,11 @@
 <table border = .1px align = center style="width:60%">
 <tr>
 <th>Name</th>
-<th>Bangla</th>
-<th>English</th>
-<th>Math</th>
-<th>Total</th>
-<th>Grade</th>
+<th>Course ID</th>
+<th>Mid-term Mark</th>
+<th>Final Mark</th>
+<th>Total Marks</th>
+<th>Final Grade</th>
 </tr>
 
 
@@ -42,12 +42,12 @@ if($runQuery == true){
 	while($data = mysqli_fetch_array($runQuery)){ ?>
 		<tr>
 		<td><?php echo $data["name"];?></td>
-		<td><?php echo $data["bangla"];?></td>
-		<td><?php echo $data["english"];?></td>
-		<td><?php echo $data["math"];?></td>
-		<?php $total = $data["math"]+$data["english"]+$data["bangla"]; 
-		if($total>239) $grade = "A+";
-		if($total<239) $grade = "A-";?>
+		<td><?php echo $data["courseid"];?></td>
+		<td><?php echo $data["mid"];?></td>
+		<td><?php echo $data["final"];?></td>
+		<?php $total = $data["mid"]+$data["final"];
+		if($total>160) $grade = "A+";
+		if($total<160) $grade = "A-";?>
 		<td><?php echo $total;?></td>
 		<td><?php echo $grade;?></td>
 		</tr>

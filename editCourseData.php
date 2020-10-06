@@ -13,18 +13,18 @@
         if(isset($_REQUEST["id"])){
             $editID = $_REQUEST["id"];
         }
-        $fetchQuery = "SELECT * FROM result WHERE id = $editID";
+        $fetchQuery = "SELECT * FROM course WHERE id = $editID";
         $runQuery = mysqli_query($con,$fetchQuery);
 
         while($data = mysqli_fetch_array($runQuery)){ ?>
-        <form action = "editResultDB.php" method = "GET" align = "center">
+        <form action = "editCourse.php" method = "GET" align = "center">
 	    <br><br><br><br><br><br><br><br><br>
-        Name of the Student: <input type="text" name="name" value = "<?php echo $data["name"];?>"/> <br><br><br>
-        Course ID: <input type="number" name="courseid" value = "<?php echo $data["courseid"];?>"/> <br><br><br>
-	    Mid-term Mark: <input type="number" name="mid" value = "<?php echo $data["mid"];?>"/> / 50 <br> <br>
-        Final Mark: <input type="number" name="final" value = "<?php echo $data["final"];?>"/> / 150 <br> <br>
+        Course ID: <input type="number" name="id" value = "<?php echo $data["id"];?>"/> <br><br>
+	    Name: <input type="text" name="name" value = "<?php echo $data["name"];?>"/> <br> <br>
+        Semester: <input type="text" name="semester" value = "<?php echo $data["semester"];?>"/> <br> <br>
+        Credit: <input type="text" name="credit" value = "<?php echo $data["credit"];?>"/><br> <br> <br>
 	    <input type="submit" name="submitButton" value ="Submit"/> <br> <br>
-	    <a href="editResult.php">Go Back</a> <br>
+	    <a href="course.php">Go Back</a> <br>
         <br> 
         </form>
             
