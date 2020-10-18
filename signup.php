@@ -43,23 +43,7 @@
 						</span>
 					</div>
 
-					<div class="wrap-input100 validate-input">
-					<label for="role"><font color = grey> Select Your Role </font></label><select name="role" id="role">
-					<option value = "Teacher">Teacher</option>
-					<option value="Student">Student</option> </select>
-						<span class="focus-input100"></span>
-					</div>
-
-
-					<div class="wrap-input100 validate-input">
-					<label for="semester"><font color = grey>Select Your Semester</font></label> <select name="semester" id="semester">
-					<option value="0">N/A</option>
-					<option value="1">1</option>
-					<option value="2">2</option>
-					<option value="3">3</option>
-						</select>
-						<span class="focus-input100"></span>
-					</div>
+					
 
 
 
@@ -77,6 +61,25 @@
 						<span class="symbol-input100">
 							<i class="fa fa-lock" aria-hidden="true"></i>
 						</span>
+					</div>
+
+					<div class="wrap-input100 validate-input">
+					<label for="role"><font color = grey> Select Your Role </font></label><select name="role" id="role">
+					<option value = "Teacher">Teacher</option>
+					<option value="Student">Student</option> </select>
+						<span class="focus-input100"></span>
+					</div>
+					
+
+
+					<div class="wrap-input100 validate-input">
+					<label for="semester"><font color = grey>Select Your Semester</font></label> <select name="semester" id="semester">
+					<option value="0">N/A</option>
+					<option value="1">1</option>
+					<option value="2">2</option>
+					<option value="3">3</option>
+						</select>
+						<span class="focus-input100"></span>
 					</div>
 					
 					<div class="container-login100-form-btn">

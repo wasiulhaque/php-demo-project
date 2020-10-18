@@ -1,15 +1,74 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+	<style type = "text/css">
+	table{margin:auto;}
+	table th{ text-align: center; }
+	input[type=text] {
+  width: 30%;
+  padding: 10px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: 1px solid black;
+
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  outline: none;
+}
+input[type=number] {
+  width: 10%;
+  padding: 10px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: 1px solid black;
+
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  outline: none;
+}
+
+input[type=submit] {
+  width: 10%;
+  text-align: center;
+  padding: 10px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  background: green;
+  color: white;
+
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  outline: none;
+}
+
+	</style>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Add Result</title>
+	<title>Add Result</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<!--===============================================================================================-->	
+	<link rel="icon" type="image/png" href="images/icons/favicon.ico"/>
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/animate/animate.css">
+<!--===============================================================================================-->	
+	<link rel="stylesheet" type="text/css" href="vendor/css-hamburgers/hamburgers.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/select2/select2.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="css/util.css">
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+<!--===============================================================================================-->
 </head>
 <body align='center'>
+<br><br><br><br><br><br><br><br>
 
 
 <form action = "addResultDB.php" method = "GET" align = "center">
-	<br><br><br><br><br><br><br><br><br>
     Name of the Student: <input type="text" name="name"/> <br><br>
 	Course ID: <input type="number" name="courseid"/> <br> <br>
     Mid-term Mark: <input type="number" name="mid"/> / 50 <br> <br>
@@ -19,7 +78,7 @@
     <br> 
 </form>
 
-<h3>DATASHEET</h3>
+<h3 align=center>DATASHEET</h3>
 <table border = .1px align = center style="width:60%">
 <tr>
 <th>Name</th>
@@ -56,7 +115,7 @@ if($runQuery == true){
 
 </table>
 <br>
-<hr>
+
 <br>
 
 <?php
@@ -74,6 +133,7 @@ if(isset($_REQUEST["action"])){
 }
 
 ?>
+
 
 
 </body>

@@ -1,19 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<style type = "text/css">
+	table{margin:auto;}
+	table th{ text-align: center; }
+	input[type=text] {
+  width: 30%;
+  padding: 10px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: 1px solid black;
+
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  outline: none;
+}
+input[type=number] {
+  width: 10%;
+  padding: 10px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: 1px solid black;
+
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  outline: none;
+}
+
+input[type=submit] {
+  width: 10%;
+  text-align: center;
+  padding: 10px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  background: green;
+  color: white;
+
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  outline: none;
+}
+
+	</style>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Active Courses</title>
+	<title>Active Courses</title>
+	<link rel="icon" type="image/png" href="images/icons/favicon.ico"/>
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/animate/animate.css">
+<!--===============================================================================================-->	
+	<link rel="stylesheet" type="text/css" href="vendor/css-hamburgers/hamburgers.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/select2/select2.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="css/util.css">
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+<!--===============================================================================================-->
 </head>
 <body align='center'>
 
 <form action = "addCourseDB.php" method = "GET" align = "center">
 	<br><br><br><br>
-    Add New Course: <br><br>
+    <h5>Add New Course: </h5><br>
     Course ID: <input type="number" name="id"/> <br><br>
 	Name: <input type="text" name="name"/> / 100 <br> <br>
     Semester: <input type="text" name="semester"/> / 100 <br> <br>
-    Credit: <input type="text" name="credit"/> / 100 <br> <br> <br>
+    Credit: <input type="text" name="credit"/> / 100 <br> <br> 
 	<input type="submit" name="submitButton" value ="Submit"/> 
 </form>
 <br>
@@ -52,7 +108,7 @@ if($runQuery == true){
 </table>
 <br>
 <a href="teacherWelcome.php">Home</a>
-<hr>
+
 <br>
 
 <?php
